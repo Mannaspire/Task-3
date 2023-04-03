@@ -1,0 +1,102 @@
+<div class="row w-100">
+    <div class="col-md-2 sidenav">
+        <div class=" text-center">
+            <a routerLink="/vendor" class="sidenavele">Product<br>
+            </a>
+            <a class="sidenavele">Config</a><br>
+            <h6>Hello {{userid}}</h6>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                <a type="button" (click)="AddProduct()" class="btn" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <path
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+                </a>
+            </svg>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form [formGroup]="formvalue" class="text-start">
+                                <div class="mb-3">
+                                    <label for="Name" class="form-label">Name</label>
+                                    <input type="text" formControlName="fname" class="form-control" id="Name"
+                                        aria-describedby="emailHelp" name="fname">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Image" class="form-label">Image</label>
+                                    <input type="text" formControlName="img" class="form-control" id="Image" name="img">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Description" class="form-label">Description</label>
+                                    <input type="text" formControlName="desc" class="form-control" id="Description"
+                                        aria-describedby="emailHelp" name="desc">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Price" class="form-label">Price</label>
+                                    <input type="text" formControlName="price" class="form-control" id="Price"
+                                        aria-describedby="emailHelp" name="price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Category" class="form-label">Category</label>
+                                    <input type="text" formControlName="category" class="form-control" id="Category"
+                                        aria-describedby="emailHelp" name="category">
+                                </div>
+                                <div class="mb-3 ">
+                                    <label for="Category" class="form-label">Vendor</label>
+                                    <input type="text" formControlName="vendorname" class="form-control" id="Category"
+                                        aria-describedby="emailHelp" name="category">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="cancel" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button" *ngIf="showAdd" (click)="postVendorDetails()"
+                                class="btn btn-primary">+ Add</button>
+                            <button type="button" *ngIf="showUpdate" (click)="updateProductData()"
+                                class="btn btn-success">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="row mt-3">
+            <div class="col-md-3 mb-3" *ngFor="let row of vendorproductdata">
+                <div class="card h-100" style="width: 17rem;">
+                    <img src="assets/img/p1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{row.fname}}</h5>
+                        <p class="card-text">{{row.desc}}</p>
+                        <p class="card-text">{{row.price}}</p>
+                        <p class="card-text">{{row.category}}</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-pen-fill mx-3" viewBox="0 0 16 16">
+                            <a (click)="onEditProduct(row)" type="submit" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" class="btn">
+                                <path
+                                    d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+                            </a>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=""
+                            class="bi bi-trash3-fill mx-3" viewBox="0 0 16 16">
+                            <a (click)="deleteProduct(row)" class="btn">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </a>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

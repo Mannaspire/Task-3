@@ -1,0 +1,15 @@
+<form class="container mt-3" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <!-- <input type="email" class="form-control" name="username"  [(ngModel)] = "loginObj.username" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+    <input type="email" class="form-control" name="username"  formControlName = "username" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <!-- <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)] = "loginObj.password"> -->
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password" formControlName="password">
+  </div>
+  <!-- <button type="submit" class="btn btn-success mb-3" (click)="onLogin()">Submit</button> -->
+  <button type="submit" class="btn btn-success mb-3">Submit</button>
+</form>

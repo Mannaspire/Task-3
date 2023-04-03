@@ -1,0 +1,14 @@
+.logout{
+    background-color: #fd7e14;
+    color: black;
+}
+
+.login{
+    background-color: #495057;
+    color: white;
+}
+
+button{
+    border: none;
+    padding: 5px 15px;
+}
