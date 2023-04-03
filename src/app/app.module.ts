@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { VendorComponent } from './vendor/vendor.component';
 import { AuthGaurdService } from './shared/auth-gaurd.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AuthGaurdService } from './shared/auth-gaurd.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
 
   providers: [AuthGaurdService],
