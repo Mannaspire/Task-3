@@ -177,6 +177,16 @@
       "category": "fdsf",
       "vendorname": "vendor2",
       "isApproved": true
+    },
+    {
+      "id": 20,
+      "fname": "Camera",
+      "img": "dvgsd",
+      "desc": " A digital camera is a hardware device that takes photographs and stores the image as data on a memory card.",
+      "price": "50,000",
+      "category": "Electornics",
+      "vendorname": "vendor1",
+      "isApproved": false
     }
   ]
 }

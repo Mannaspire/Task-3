@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../shared/api.service';
 import { VendorModel } from './vendor.model';
 
@@ -26,13 +26,19 @@ export class VendorComponent implements OnInit {
     this.userid = sessionStorage.getItem('username');
 
     this.formvalue = this.formbuilder.group({
-      fname: [''],
-      img: [''],
-      desc: [''],
-      price: [''],
-      category: [''],
+      fname: ['', Validators.required],
+      img: ['', Validators.required],
+      desc: ['', Validators.required],
+      price: ['', Validators.required],
+      category: ['', Validators.required],
       vendorname: ['']
     })
+
+    // this.formvalue = new FormGroup({
+    //   fname: new FormControl('', [Validators.required]),
+    // img: new FormControl('', [Validators.required])
+    // });
+
     this.getAllData();
   }
 
