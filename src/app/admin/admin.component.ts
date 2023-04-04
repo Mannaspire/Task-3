@@ -19,6 +19,8 @@ export class AdminComponent implements OnInit {
     this.vendorproduct();
   }
 
+  p: any;
+  row: any = [];
   vendorproduct() {
     this.api.getVendor().subscribe((res: any) => {
       console.log(res);
@@ -39,4 +41,15 @@ export class AdminComponent implements OnInit {
       this.vendorproduct();
     })
   }
+
+  // p: any;
+  // data: any = [];
+  // getData() {
+  //   this.api.getVendor().subscribe(
+  //     (data) => {
+  //       this.data = data;
+  //       console.log(this.data)
+  //     }
+  //   );
+  // }
 }

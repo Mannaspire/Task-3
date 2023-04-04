@@ -20,7 +20,7 @@
         </tr>
       </thead>
       <tbody class="text-center">
-        <tr *ngFor="let row of vendorproductdata">
+        <tr *ngFor="let row of vendorproductdata | paginate: {itemsPerPage: 6, currentPage: p}">
           <td>{{row.id}}</td>
           <td>{{row.fname}}</td>
           <td>{{row.img}}</td>
@@ -49,5 +49,6 @@
         </tr>
       </tbody>
     </table>
+    <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
   </div>
 </div>
