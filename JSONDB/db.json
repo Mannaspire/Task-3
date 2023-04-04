@@ -75,7 +75,8 @@
       "desc": "The iPhone 13 features a 6.1-inch (155 mm) display with Super Retina XDR OLED technology at a resolution of 2532×1170 pixels and a pixel density of about 460 PPI with a refresh rate of 60 Hz.",
       "price": "70,000",
       "category": "Electornics",
-      "vendorname": "vendor1"
+      "vendorname": "vendor1",
+      "isApproved": true
     },
     {
       "id": 3,
@@ -84,7 +85,8 @@
       "desc": " Cargo pant also called cargo trousers or combat trousers are functional pants with a loose fit designed to allow for freedom of movement, especially at the knees and hips.",
       "price": "1,500",
       "category": "Men's Wear",
-      "vendorname": "vendor1"
+      "vendorname": "vendor1",
+      "isApproved": true
     },
     {
       "id": 4,
@@ -93,7 +95,8 @@
       "desc": "A dress is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice.",
       "price": "2,000",
       "category": "Women's Wear",
-      "vendorname": "vendor2"
+      "vendorname": "vendor2",
+      "isApproved": true
     },
     {
       "id": 5,
@@ -102,7 +105,8 @@
       "desc": "Earbuds are basically a pair of tiny speakers that you wear inside your ears.",
       "price": "1,000",
       "category": "Electornics",
-      "vendorname": "vendor2"
+      "vendorname": "vendor2",
+      "isApproved": true
     },
     {
       "id": 6,
@@ -111,7 +115,8 @@
       "desc": " A T-shirt (also spelled tee-shirt or tee shirt), or tee for short, is a style of fabric shirt named after the T shape of its body and sleeves.",
       "price": "550",
       "category": "Fashion Wear",
-      "vendorname": "vendor3"
+      "vendorname": "vendor3",
+      "isApproved": true
     },
     {
       "id": 7,
@@ -120,7 +125,8 @@
       "desc": " A digital camera is a hardware device that takes photographs and stores the image as data on a memory card.",
       "price": "50,000",
       "category": "Electornics",
-      "vendorname": "vendor3"
+      "vendorname": "vendor3",
+      "isApproved": true
     },
     {
       "id": 8,
@@ -129,7 +135,8 @@
       "desc": " Slim-fit pants or skinny jeans (when made of denim) are tight trousers that have a snug fit through the legs and end in a small leg opening that can be anywhere from 9\" to 20\" in circumference, depending on size.",
       "price": "1200",
       "category": "Men's Wear",
-      "vendorname": "vendor4"
+      "vendorname": "vendor4",
+      "isApproved": true
     },
     {
       "id": 9,
@@ -138,7 +145,8 @@
       "desc": "Baggy jeans are a style of denim pants characterized by a loose fit in the legs and/or waist. They are more loose-fitting than mom jeans, boyfriend jeans, or even straight-leg jeans.",
       "price": "800",
       "category": "Women's Wear",
-      "vendorname": "vendor4"
+      "vendorname": "vendor4",
+      "isApproved": true
     },
     {
       "id": 10,
@@ -147,7 +155,8 @@
       "desc": " The S21 FE has the same frosted glass back, the same 120Hz refresh rate on its FHD+ AMOLED screen, the same RAM and storage options, the same Qualcomm Snapdragon 888 and both are 5G and Wi-Fi 6 capable.",
       "price": "31,000",
       "category": "Electornics",
-      "vendorname": "vendor5"
+      "vendorname": "vendor5",
+      "isApproved": true
     },
     {
       "id": 11,
@@ -156,7 +165,8 @@
       "desc": " Sunglasses are used to shade the eyes from sunlight. They are usually made of a plastic or metal frame and two lenses that are darkened to filter out light. Sunglasses can have prescription lenses like eyeglasses, but they can also have lenses that are not for correcting vision.",
       "price": "6,000",
       "category": "Accessories",
-      "vendorname": "vendor5"
+      "vendorname": "vendor5",
+      "isApproved": true
     },
     {
       "id": 19,
@@ -165,7 +175,8 @@
       "desc": "sfdaf",
       "price": "23432",
       "category": "fdsf",
-      "vendorname": "vendor2"
+      "vendorname": "vendor2",
+      "isApproved": true
     },
     {
       "id": 22,
@@ -174,7 +185,8 @@
       "desc": " A digital camera is a hardware device that takes photographs and stores the image as data on a memory card.",
       "price": "143234",
       "category": "dsgsd",
-      "vendorname": "vendor1"
+      "vendorname": "vendor1",
+      "isApproved": true
     }
   ]
 }
