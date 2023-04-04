@@ -8,9 +8,9 @@ import { ApiService } from '../shared/api.service';
 })
 export class AdminvendorComponent implements OnInit {
 
-  vendors:any;
+  vendors: any;
   userid: any;
-  constructor(private service:ApiService) { }
+  constructor(private service: ApiService) { }
 
   // vendors:Vendor[] = vendorData;
 
@@ -18,16 +18,16 @@ export class AdminvendorComponent implements OnInit {
     this.userid = sessionStorage.getItem('username');
     this.getvendor();
   }
-  
-  getvendor(){
-    this.service.getAdminvendor(username).subscribe((res)=>{
+
+  getvendor() {
+    this.service.getAdminvendor(username).subscribe((res) => {
       console.log(res);
-      this.vendors=res;
+      this.vendors = res;
     })
   }
 
-  deleteAdminvendor(vendor: any){
-    this.service.deleteAdminvendor(vendor.id).subscribe(res=>{
+  deleteAdminvendor(vendor: any) {
+    this.service.deleteAdminvendor(vendor.id).subscribe(res => {
       console.log("Deleted Successfully");
       this.getvendor();
     })

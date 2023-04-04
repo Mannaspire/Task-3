@@ -6,7 +6,7 @@ import { ApiService } from './api.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGaurdService implements CanActivate {
+export class AuthGaurdService {
 
   constructor(private loged: ApiService) { }
 

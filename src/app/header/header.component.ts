@@ -9,30 +9,28 @@ import { ApiService } from '../shared/api.service';
 })
 export class HeaderComponent implements OnInit {
 
-
-
-  constructor(private router: Router, private route:ActivatedRoute,private service:ApiService){}
+  constructor(private router: Router, private route: ActivatedRoute, private service: ApiService) { }
 
   ngOnInit(): void {
-      
-  }
-  
-hidden(){
-  if(this.service.isloggin()==true){
-    return true;
-  }
-  else{
-    return false;
-  }
-}
 
-  onLogIn(){
-    this.router.navigate(['login'], {relativeTo: this.route});
   }
 
-  onLogout(){
-    this.service.islogged= false;
-    this.router.navigate(['login'], {relativeTo: this.route});
+  hidden() {
+    if (this.service.isloggin() == true) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  onLogIn() {
+    this.router.navigate(['login'], { relativeTo: this.route });
+  }
+
+  onLogout() {
+    sessionStorage.removeItem('user');
+    this.router.navigate(['login'], { relativeTo: this.route });
   }
 
 }

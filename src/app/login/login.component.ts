@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
 
+    //1st Method
     // if(this.loginObj.username == 'admin' && this.loginObj.password == 'admin@123'){
 
     //   this.login=true;
@@ -54,6 +55,8 @@ export class LoginComponent implements OnInit {
     // } else {
     // }
 
+
+    //2nd Method
     // this.http.get("http://localhost:3000/adminvendor").subscribe(res => {
     //   this.vendor = res;
 
@@ -83,45 +86,47 @@ export class LoginComponent implements OnInit {
     // })
     // "http://localhost:3000/adminvendor/?username=" + 
 
+
+    //3rd Method
     if (this.loginForm.valid) {
       console.log("form submited");
-      this.http.get("http://localhost:3000/adminvendor/?username=" +this.loginForm.value.username).subscribe(data => {
+      this.http.get("http://localhost:3000/adminvendor/?username=" + this.loginForm.value.username).subscribe(data => {
 
         this.vendor = data;
         console.log(this.vendor);
 
         console.log("1");
-        
+
         if (this.vendor[0].username === this.loginForm.value.username) {
-          
+
           console.log("2");
           sessionStorage.setItem('user', JSON.stringify(this.vendor));
-          sessionStorage.setItem('username', this.vendor[0].username  );
-          
+          sessionStorage.setItem('username', this.vendor[0].username);
+
           if (this.vendor[0].role === 'admin') {
 
             this.login = true;
-            this.services.log(this.login);
+            this.services.login(this.login);
             this.router.navigateByUrl('/admin/:id');
             console.log("Admin");
-            
+
 
           }
           if (this.vendor[0].role === 'vendor') {
 
             this.login = true;
-            this.services.log(this.login);
+            this.services.login(this.login);
             this.router.navigateByUrl('vendor/:id');
             console.log("Vendor");
-            
+
           }
         }
         else {
-          // this.message = 'Please check your credentials and try again.'; 
+          console.log("Error!!");
         }
       });
     }
-    }
+  }
   // get username() {
   //   return this.loginForm.get('username');
   // }

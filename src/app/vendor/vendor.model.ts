@@ -5,6 +5,6 @@ export class VendorModel{
     desc : any = '';
     price : any = '';
     category: any = ''; 
-  vendorname: any = '';
- 
+    vendorname: any = '';
+    isApproved: any = false;
 }

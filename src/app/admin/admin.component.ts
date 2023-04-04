@@ -26,6 +26,13 @@ export class AdminComponent implements OnInit {
     })
   }
 
+  approveproduct(data: any) {
+    data['isApproved'] = true;
+    this.api.updateVendor(data, data.id).subscribe(res => {
+      console.log("Updated Successfully");
+    })
+  }
+
   deleteproduct(product: any) {
     this.api.deleteVendor(product.id).subscribe(res => {
       console.log("Deleted Successfully");
