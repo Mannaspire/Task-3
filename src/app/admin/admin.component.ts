@@ -41,15 +41,4 @@ export class AdminComponent implements OnInit {
       this.vendorproduct();
     })
   }
-
-  // p: any;
-  // data: any = [];
-  // getData() {
-  //   this.api.getVendor().subscribe(
-  //     (data) => {
-  //       this.data = data;
-  //       console.log(this.data)
-  //     }
-  //   );
-  // }
 }

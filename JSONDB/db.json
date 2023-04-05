@@ -169,16 +169,6 @@
       "isApproved": true
     },
     {
-      "id": 19,
-      "fname": "Camera",
-      "img": "dvgsd",
-      "desc": "sfdaf",
-      "price": "23432",
-      "category": "fdsf",
-      "vendorname": "vendor2",
-      "isApproved": true
-    },
-    {
       "id": 20,
       "fname": "Camera",
       "img": "dvgsd",
@@ -186,7 +176,7 @@
       "price": "50,000",
       "category": "Electornics",
       "vendorname": "vendor1",
-      "isApproved": false
+      "isApproved": true
     }
   ]
 }

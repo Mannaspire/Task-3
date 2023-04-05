@@ -15,7 +15,7 @@ export class AdminvendorComponent implements OnInit {
   // vendors:Vendor[] = vendorData;
 
   ngOnInit(): void {
-    this.userid = sessionStorage.getItem('username');
+    this.userid = JSON.parse(sessionStorage.getItem('user') || '')['username'];
     this.getvendor();
   }
 
