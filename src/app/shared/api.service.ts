@@ -74,7 +74,7 @@ export class ApiService {
   }
 
   login(user: any) {
-    sessionStorage.setItem('user', user);
+    sessionStorage.setItem('user', JSON.stringify(user));
   }
 
   isloggin() {

@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
 
   onLogout() {
     sessionStorage.removeItem('user');
+    sessionStorage.removeItem('username')
     this.router.navigate(['login'], { relativeTo: this.route });
   }
 

@@ -15,7 +15,7 @@ export class AdminComponent implements OnInit {
   constructor(private api: ApiService, private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.userid = sessionStorage.getItem('username');
+    this.userid = JSON.parse(sessionStorage.getItem('user') || '')['username'];
     this.vendorproduct();
   }
 

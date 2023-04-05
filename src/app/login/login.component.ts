@@ -100,13 +100,14 @@ export class LoginComponent implements OnInit {
         if (this.vendor[0].username === this.loginForm.value.username) {
 
           console.log("2");
-          sessionStorage.setItem('user', JSON.stringify(this.vendor));
-          sessionStorage.setItem('username', this.vendor[0].username);
+          console.log(this.vendor[0]);
+          // sessionStorage.setItem('user', this.vendor[0]);
+          // sessionStorage.setItem('username', this.vendor[0].username);
 
           if (this.vendor[0].role === 'admin') {
 
             this.login = true;
-            this.services.login(this.login);
+            this.services.login(this.vendor[0]);
             this.router.navigateByUrl('/admin/:id');
             console.log("Admin");
 
@@ -115,7 +116,7 @@ export class LoginComponent implements OnInit {
           if (this.vendor[0].role === 'vendor') {
 
             this.login = true;
-            this.services.login(this.login);
+            this.services.login(this.vendor[0]);
             this.router.navigateByUrl('vendor/:id');
             console.log("Vendor");
 

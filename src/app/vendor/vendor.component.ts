@@ -23,7 +23,6 @@ export class VendorComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.userid = sessionStorage.getItem('username');
 
     this.formvalue = this.formbuilder.group({
       fname: ['', Validators.required],
@@ -66,10 +65,14 @@ export class VendorComponent implements OnInit {
     )
   }
 
+
   getAllData() {
-    const user = JSON.parse(sessionStorage.getItem('user') || "");
-    console.log(user[0].id);
-    this.api.getProductById(user[0].username).subscribe(res => {
+    console.log(sessionStorage);
+    const userData = sessionStorage.getItem('user');
+    const user = JSON.parse(userData || '');
+    this.userid = user['username'];
+    console.log(user['id']);
+    this.api.getProductById(user.username).subscribe(res => {
       this.vendorproductdata = res;
     })
   }
