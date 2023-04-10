@@ -97,7 +97,7 @@ export class LoginComponent implements OnInit {
 
         console.log("1");
 
-        if (this.vendor[0].username === this.loginForm.value.username) {
+        if (this.vendor[0].username === this.loginForm.value.username && this.vendor[0].password === this.loginForm.value.password) {
 
           console.log("2");
           console.log(this.vendor[0]);

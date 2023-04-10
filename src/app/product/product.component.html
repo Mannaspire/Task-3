@@ -74,10 +74,11 @@
   </div>
 </div> -->
 
+<div class="container">
 <div class="row row-cols-1 mt-2 mb-3 mx-0 row-cols-md-2 g-2 w-100">
     <div *ngFor="let row of vendorproductdata">
         <div class="col" *ngIf="row.isApproved">
-            <div class="card h-100" *ngIf="row.isApproved">
+            <div class="card">
                 <img src="assets/img/p4.jpg" class="card-img-top" alt="..." style="height: auto; width: auto;">
                 <div class="card-body">
                     <h5 class="card-title">{{row.fname}}</h5>
@@ -91,5 +92,5 @@
             </div>
         </div>
     </div>
-
+</div>
 </div>
