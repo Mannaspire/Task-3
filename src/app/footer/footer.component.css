@@ -1,12 +1,13 @@
 footer {
     background-color: #adb5bd;
-    position: relative;
-    bottom: 0%;
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     text-align: center;
 }
 
 p {
-    padding-top: 1.3vw;
-    padding-bottom: 1.3vw;
+    padding-top: 1.5vw;
+    padding-bottom: 0.5vw;
 }

@@ -1,10 +1,16 @@
-html,
-body,
-app-root {
+html {
   height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-  margin-bottom: 0;
-  margin-top: 0;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  box-sizing: inherit;
+  padding-bottom: 4rem;
+}
+
+app-root {
+  margin: 0 auto;
 }
