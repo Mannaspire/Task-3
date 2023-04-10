@@ -111,7 +111,6 @@ export class LoginComponent implements OnInit {
             this.router.navigateByUrl('/admin/:id');
             console.log("Admin");
 
-
           }
           if (this.vendor[0].role === 'vendor') {
 

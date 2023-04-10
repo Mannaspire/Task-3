@@ -24,18 +24,13 @@ export class VendorComponent implements OnInit {
   ngOnInit(): void {
 
     this.formvalue = this.formbuilder.group({
-      fname: [''],
-      img: [''],
-      desc: [''],
-      price: [''],
-      category: [''],
+      fname: ['', [Validators.required]],
+      img: ['', [Validators.required]],
+      desc: ['', [Validators.required]],
+      price: ['', [Validators.required]],
+      category: ['', [Validators.required]],
       vendorname: ['']
     })
-
-    // this.formvalue = new FormGroup({
-    //   fname: new FormControl('', [Validators.required]),
-    // img: new FormControl('', [Validators.required])
-    // });
 
     this.getAllData();
   }
