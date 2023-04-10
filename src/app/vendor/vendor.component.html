@@ -25,27 +25,28 @@
                             <form [formGroup]="formvalue" class="text-start">
                                 <div class="mb-3">
                                     <label for="Name" class="form-label">Name</label>
-                                    <input type="text" formControlName="fname" class="form-control" id="Name"
+                                    <input required type="text" formControlName="fname" class="form-control" id="Name"
                                         aria-describedby="emailHelp" name="fname">
                                 </div>
                                 <div class="mb-3">
                                     <label for="Image" class="form-label">Image</label>
-                                    <input type="text" formControlName="img" class="form-control" id="Image" name="img">
+                                    <input required type="text" formControlName="img" class="form-control" id="Image"
+                                        name="img">
                                 </div>
                                 <div class="mb-3">
                                     <label for="Description" class="form-label">Description</label>
-                                    <input type="text" formControlName="desc" class="form-control" id="Description"
-                                        aria-describedby="emailHelp" name="desc">
+                                    <input required type="text" formControlName="desc" class="form-control"
+                                        id="Description" aria-describedby="emailHelp" name="desc">
                                 </div>
                                 <div class="mb-3">
                                     <label for="Price" class="form-label">Price</label>
-                                    <input type="text" formControlName="price" class="form-control" id="Price"
+                                    <input required type="text" formControlName="price" class="form-control" id="Price"
                                         aria-describedby="emailHelp" name="price">
                                 </div>
                                 <div class="mb-3">
                                     <label for="Category" class="form-label">Category</label>
-                                    <input type="text" formControlName="category" class="form-control" id="Category"
-                                        aria-describedby="emailHelp" name="category">
+                                    <input required type="text" formControlName="category" class="form-control"
+                                        id="Category" aria-describedby="emailHelp" name="category">
                                 </div>
                                 <div class="mb-3 d-none">
                                     <label for="Category" class="form-label">Vendor</label>
