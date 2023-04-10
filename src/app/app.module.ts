@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { VendorComponent } from './vendor/vendor.component';
 import { AuthGaurdService } from './shared/auth-gaurd.service';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatToolbarModule,
   ],
 
   providers: [AuthGaurdService],
