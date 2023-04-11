@@ -69,16 +69,6 @@
   ],
   "vendorproduct": [
     {
-      "id": 2,
-      "fname": "Iphone 13",
-      "img": "cell phone",
-      "desc": "The iPhone 13 features a 6.1-inch (155 mm) display with Super Retina XDR OLED technology at a resolution of 2532×1170 pixels and a pixel density of about 460 PPI with a refresh rate of 60 Hz.",
-      "price": "70,000",
-      "category": "Electornics",
-      "vendorname": "vendor1",
-      "isApproved": true
-    },
-    {
       "id": 3,
       "fname": "Cargo Jeans",
       "img": "jeans",
