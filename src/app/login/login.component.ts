@@ -90,32 +90,36 @@ export class LoginComponent implements OnInit {
     //3rd Method
     if (this.loginForm.valid) {
       console.log("form submited");
-      this.http.get("http://localhost:3000/adminvendor/?username=" + this.loginForm.value.username).subscribe(data => {
+      this.services.postAdminvendor(this.loginForm.value).subscribe(data => {
 
         this.vendor = data;
         console.log(this.vendor);
 
         console.log("1");
+        console.log(this.vendor.accessToken);
+        
 
-        if (this.vendor[0].username === this.loginForm.value.username && this.vendor[0].password === this.loginForm.value.password) {
+        if (this.vendor.accessToken) {
 
           console.log("2");
-          console.log(this.vendor[0]);
+          console.log(this.vendor);
           // sessionStorage.setItem('user', this.vendor[0]);
           // sessionStorage.setItem('username', this.vendor[0].username);
 
-          if (this.vendor[0].role === 'admin') {
+          console.log(this.vendor.roles);
+          
+          if (this.vendor.roles == 'ROLE_ADMIN') {
 
             this.login = true;
-            this.services.login(this.vendor[0]);
+            this.services.login(this.vendor);
             this.router.navigateByUrl('/admin/:id');
             console.log("Admin");
 
           }
-          if (this.vendor[0].role === 'vendor') {
+          if (this.vendor.roles == 'ROLE_USER') {
 
             this.login = true;
-            this.services.login(this.vendor[0]);
+            this.services.login(this.vendor);
             this.router.navigateByUrl('vendor/:id');
             console.log("Vendor");
 

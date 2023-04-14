@@ -10,32 +10,32 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   postAdminvendor(data: any) {
-    return this.http.post<any>("http://localhost:3000/adminvendor", data)
+    return this.http.post<any>("http://localhost:9090/api/auth/signin", data)
       .pipe(map((res: any) => {
         return res;
       }))
   }
   getAdminvendor(username: any) {
-    return this.http.get<any>("http://localhost:3000/adminvendor?role=vendor")
+    return this.http.get<any>("http://localhost:9090/api/auth/signin?role=vendor")
       .pipe(map((res: any) => {
         return res;
       }))
   }
   updateAdminvendor(data: any, id: number) {
-    return this.http.put<any>("http://localhost:3000/adminvendor" + id, data)
+    return this.http.put<any>("http://localhost:9090/api/auth/signin" + id, data)
       .pipe(map((res: any) => {
         return res;
       }))
   }
   deleteAdminvendor(id: number) {
-    return this.http.delete<any>("http://localhost:3000/adminvendor" + "/" + id)
+    return this.http.delete<any>("http://localhost:9090/api/auth/signin" + "/" + id)
       .pipe(map((res: any) => {
         return res;
       }))
   }
 
   postVendor(data: any) {
-    return this.http.post<any>("http://localhost:3000/vendorproduct", data)
+    return this.http.post<any>("http://localhost:9090/products/", data)
       .pipe(map((res: any) => {
         return res;
       }))

@@ -42,14 +42,17 @@ export class VendorComponent implements OnInit {
   }
 
   postVendorDetails() {
-    this.vendorModelObj.fname = this.formvalue.value.fname;
-    this.vendorModelObj.img = this.formvalue.value.img;
-    this.vendorModelObj.desc = this.formvalue.value.desc;
-    this.vendorModelObj.price = this.formvalue.value.price;
-    this.vendorModelObj.category = this.formvalue.value.category;
-    this.vendorModelObj.vendorname = this.userid;
+    // this.vendorModelObj.fname = this.formvalue.value.fname;
+    // this.vendorModelObj.img = this.formvalue.value.img;
+    // this.vendorModelObj.desc = this.formvalue.value.desc;
+    // this.vendorModelObj.price = this.formvalue.value.price;
+    // this.vendorModelObj.category = this.formvalue.value.category;
+    // this.vendorModelObj.vendorname = this.userid;
 
-    this.api.postVendor(this.vendorModelObj).subscribe((res: any) => {
+    
+    const formdata = new FormData();
+
+    this.api.postVendor(this.AddProduct).subscribe((res: any) => {
       console.log(res);
       let ref = document.getElementById('cancel')
       ref?.click();
